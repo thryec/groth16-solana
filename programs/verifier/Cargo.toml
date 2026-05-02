@@ -1,0 +1,32 @@
+[package]
+name = "verifier"
+version = "0.1.0"
+description = "Circuit-agnostic Groth16 verifier template for Solana"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "verifier"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build"]
+anchor-debug = []
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+anchor-lang = "1.0.0"
+solana-bn254 = "2"
+sha2 = "0.10"
+ark-ff = "0.5"
+ark-bn254 = "0.5"
+num-bigint = "0.4"
+thiserror = "1"
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }

@@ -1,0 +1,48 @@
+# Rust / Anchor
+/target
+/programs/**/target
+.anchor
+test-ledger
+artifacts/
+.circuit-ids/
+
+# Node / TS
+node_modules
+/dist
+/build
+*.tsbuildinfo
+
+# Circuits (large artifacts from circom/snarkjs)
+*.r1cs
+*.wasm
+*.sym
+*.zkey
+*.ptau
+circuits/**/witness.wtns
+circuits/**/proof.json
+circuits/**/public.json
+circuits/**/verification_key.json
+circuits/**/*_js/
+
+# Secrets / local config
+.env
+.env.*
+!.env.example
+*.pem
+id.json
+keypair*.json
+
+# Logs
+*.log
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local-only docs and context
+docs/
+exercises/
+CLAUDE.md
+.claude/

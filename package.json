@@ -1,0 +1,21 @@
+{
+  "name": "groth16-solana",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:integration": "vitest run -c tests/vitest.config.ts",
+    "fixtures": "node ts/tests/fixtures/gen.mjs"
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "^0.32.1",
+    "@solana/web3.js": "^1.98.4",
+    "@types/node": "^25.6.0",
+    "circomlib": "^2.0.5",
+    "circomlibjs": "^0.1.7",
+    "ffjavascript": "^0.3.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.4"
+  }
+}
